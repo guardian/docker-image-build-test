@@ -23,6 +23,7 @@ RUN \
   apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv C7917B12 && \
   echo 'deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu precise main' | tee /etc/apt/sources.list.d/nodejs.list && \
   apt-get update && \
+  apt-get upgrade && \
   apt-get install -y -o "Acquire::http::Timeout=900" --no-install-recommends python-software-properties python g++ make nodejs openjdk-7-jdk ruby1.9.1-full git libpng-dev nodejs &&\
   npm -g install grunt-cli && \
   gem install bundler
